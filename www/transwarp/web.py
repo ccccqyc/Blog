@@ -676,7 +676,7 @@ class Request(object):
         wsgi server调用 wsgi 处理函数时传入的
         包含了用户请求的所有数据
         """
-       self._environ = environ
+        self._environ = environ
 
     def _parse_input(self):
         """
