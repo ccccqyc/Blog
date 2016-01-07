@@ -24,16 +24,16 @@ $(function () {
             submit: function (event) {
                 event.preventDefault();
                 if (! this.name.trim()) {
-                    return showError('请输入名字');
+                    return showError('Please enter the name');
                 }
                 if (! validateEmail(this.email.trim().toLowerCase())) {
-                    return showError('请输入正确的Email地址');
+                    return showError('Please enter the correct Email address');
                 }
                 if (this.password1.length < 6) {
-                    return showError('口令长度至少为6个字符');
+                    return showError('Password at least 6 characters');
                 }
                 if (this.password1 !== this.password2) {
-                    return showError('两次输入的口令不一致');
+                    return showError('Two input does not match the password');
                 }
                 startLoading();
                 postApi('/api/users', {
